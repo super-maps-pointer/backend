@@ -40,8 +40,6 @@ docker-compose up postgres --build
 docker-compose up --build
 ```
 
-Make sure you are in the root folder, because the file `docker-compose.yml` will use `Dockerfile`s in both backend and frontend folders.
-
 ### 4. Run the app
 
 ```bash
