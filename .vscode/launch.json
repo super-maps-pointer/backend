@@ -8,7 +8,7 @@
             "type": "python",
             "request": "attach",
             "localRoot": "${workspaceFolder}",
-            "remoteRoot": "/super_maps_pointer",
+            "remoteRoot": "/back",
             "port": 3000,
             "secret": "debugVSCODE",
             "host": "localhost"

@@ -13,9 +13,9 @@ services:
     networks:
       - backend
 
-  web:
+  flask:
     build: .
-    command: 'flask run --host=0.0.0.0 -p 8000 --no-debugger --no-reload'
+    command: 'flask run --host=0.0.0.0 -p 8000 --no-debugger --no-reload --without-threads'
     depends_on:
       - postgres
     ports:
