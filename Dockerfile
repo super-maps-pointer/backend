@@ -12,12 +12,16 @@ ENV LANG C.UTF-8
 RUN set -ex && mkdir /back
 
 WORKDIR /back
-
+ 
 # -- Adding Pipfiles
 COPY Pipfile Pipfile
 COPY Pipfile.lock Pipfile.lock
 
 # -- Install dependencies:
-RUN set -ex && pipenv install --deploy --system --ignore-pipfile
+RUN pipenv install --deploy --system --ignore-pipfile
+
+# -- Adding script to wait for postgres to be ready
+COPY utils/wait-for.sh utils/wait-for.sh
+RUN chmod +x utils/wait-for.sh
 
 EXPOSE 8000/tcp
