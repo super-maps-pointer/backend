@@ -13,6 +13,19 @@ def create_app():
     CORS(app)
 
     # Initialize database
+    initalize_database(app)
+
+    # Initialize routes
+    register_blueprints(app)
+
+    # Support debug with VSCODE
+    if app.debug:
+        enable_debug()
+
+    return app
+
+
+def initalize_database(app):
     from app.database import db_session, init_db
 
     init_db()
@@ -23,16 +36,19 @@ def create_app():
     def shutdown_session(exception=None):
         db_session.remove()
 
-    # Initialize routes
+
+def register_blueprints(app):
     from app.main_page import main_page
 
     app.register_blueprint(main_page)
 
-    # Support debug with VSCODE
-    if app.debug:
-        import ptvsd
 
-        ptvsd.enable_attach(os.getenv('SECRET_DEBUG'),
-                            address=('0.0.0.0', 3000))
+def enable_debug():
+    import ptvsd
 
-    return app
+    ptvsd.enable_attach(os.getenv('SECRET_DEBUG'),
+                        address=('0.0.0.0', 3000))
+
+    # Enable the below line of code only if you want the application
+    # to wait untill the debugger has attached to it
+    # ptvsd.wait_for_attach()
