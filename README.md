@@ -96,6 +96,8 @@ A debugger called: `Python: Attach debugger` is set up with **VS Code**, to use 
 
 ### Unit Tests
 
+Done with `pytest` and `factory-boy`
+
 ```bash
 docker-compose -f ./docker-compose.test.yml run --rm pytest
 ```

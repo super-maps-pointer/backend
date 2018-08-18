@@ -13,7 +13,7 @@ services:
 
   pytest:
     build: .
-    command: bash -c './utils/wait-for.sh postgres:5432 -- pytest ./tests'
+    command: bash -c './utils/wait-for.sh postgres:5432 -- pytest ./tests -v'
     depends_on:
       - postgres
     ports:
