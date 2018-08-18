@@ -33,23 +33,19 @@ You will have to do it once.
 In order to Initialize volume and databases, launch the following command:
 
 ```bash
-# First, initialize the database , because it make longer to create than the flask app
-# and will conflict with docker-compose up
-docker-compose up postgres --build
-# Then build the other parts
 docker-compose up --build
 ```
 
 ### 4. Run the app
 
 ```bash
-docker-compose up web
+docker-compose up flask
 # or
 docker-compose up
 ```
 
 If all containers are up without problems:
-  - `backend_web`
+  - `backend_flask`
   - `postgres:10`
 
 Then you can now starting using the API. See the welcome page in [localhost:8000](http://127.0.0.1:8000)
@@ -88,6 +84,8 @@ pip3 install pipenv
 
 That's it. after installing or removing a package using `Pipenv`, just relaunch the `docker-compose up` command from repository root `super_maps_pointer` folder.
 
+**Or** you can enter the container using `docker`.
+
 #### Debugger
 
 A debugger called: `Python: Attach debugger` is set up with **VS Code**, to use it:
@@ -98,4 +96,8 @@ A debugger called: `Python: Attach debugger` is set up with **VS Code**, to use 
 
 ### Unit Tests
 
-Soon
+Done with `pytest` and `factory-boy`
+
+```bash
+docker-compose -f ./docker-compose.test.yml run --rm pytest
+```
