@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.com/super-maps-pointer/backend.svg?branch=master)](https://travis-ci.com/super-maps-pointer/backend)
+[![Coverage Status](https://coveralls.io/repos/github/super-maps-pointer/backend/badge.svg?branch=master)](https://coveralls.io/github/super-maps-pointer/backend?branch=master)
+[![Maintainability](https://api.codeclimate.com/v1/badges/36c91fe83de51fc7b433/maintainability)](https://codeclimate.com/github/super-maps-pointer/backend/maintainability)
+
 # BACKEND of SUPER MAPS POINTER
 
 Super maps pointer is yet another game intended to upgrade your geography skills :earth_africa: while having fun! :smile:
