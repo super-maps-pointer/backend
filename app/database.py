@@ -12,7 +12,7 @@ from sqlalchemy_utils import database_exists, create_database
 url = os.environ.get('DATABASE_URL')
 engine = create_engine(url)
 
-if not database_exists(engine.url):
+if os.getenv('FLASK_ENV') == 'development' and not database_exists(engine.url):
     create_database(engine.url)
 
 db_session = scoped_session(sessionmaker(autocommit=False,
