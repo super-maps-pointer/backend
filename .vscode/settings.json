@@ -3,5 +3,6 @@
     "python.linting.pep8Enabled": true,
     "python.linting.enabled": true,
     "debug.inlineValues": true,
+    "files.eol": "\n",
     "python.pythonPath": "C:\\Users\\Max\\AppData\\Local\\Programs\\Python\\Python36\\python.exe",
 }
