@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.0](https://github.com/super-maps-pointer/backend/tree/v1.2.0)  - 2018-08-21
+### Changed
+- [\#15](https://github.com/super-maps-pointer/backend/pull/16) Specify $PORT in Procfile for Heroku
+- [commit](https://github.com/super-maps-pointer/backend/commit/531f1c87fc15f4d93522cd0ad1c27859bb51e154) Normalize all the line endings
+- [commit](https://github.com/super-maps-pointer/backend/commit/e0b46735b0c839aeb4763259ffce4c5e8d1bd330) Compose file v3.6 + pgAdmin local docker
+
 ## [1.1.1](https://github.com/super-maps-pointer/backend/tree/v1.1.1)  - 2018-08-19
 ### Changed
 - [\#13](https://github.com/super-maps-pointer/backend/pull/14) Hotfix production database creation and remove coveralls
